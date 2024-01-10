@@ -1,0 +1,72 @@
+@import "../../app.scss";
+
+.navbar{
+    height: 100px;
+
+    .wrapper{
+        max-width: 1366px ;
+        display: flex;
+        margin: 0px 200px;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+
+        @media (min-width: 401px) and (max-width: 800px) {
+            max-width: 800px ;
+            margin: 0px 225px;
+          }
+
+        span{
+            font-weight: bold;
+
+            @include desktop{
+              font-size: 20px;
+              margin-left: 5px;
+              }
+
+            @include mobile{
+                display: none;
+            }
+        }
+
+        .social {
+            display: flex;
+            gap: 20px;
+          
+            @include mobile {
+              gap: 12%;
+              margin-left: -40px;
+            }
+          
+            @media (min-width: 401px) and (max-width: 800px) {
+              margin-left: -20px;
+            }
+          }
+    }
+}
+
+.signature {
+    font-family: 'Homemade Apple', cursive;
+    font-size: 1.1em;
+    color: white; 
+    position: relative;
+    display: inline-block;
+  }
+
+.socialimgsize{
+    height: 25px;
+    width: 30px;
+    border-radius: 50%;
+
+    @include desktop{
+      height: 30px;
+    width: 35px;
+    border-radius: 50%;
+      }
+
+    @include mobile{
+        height: 30px;
+        width: 35px;
+        margin-right: 0.5px;
+       }
+}

@@ -10,8 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
+    "@use-gesture/react": "^10.3.0",
+    "framer-motion": "^10.16.16",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-icons": "^4.12.0",
+    "react-intersection-observer": "^9.5.3",
+    "react-loader-spinner": "^6.1.6",
+    "react-scroll-parallax": "^3.4.5",
+    "sass": "^1.69.5"
   },
   "devDependencies": {
     "@types/react": "18.2.15",

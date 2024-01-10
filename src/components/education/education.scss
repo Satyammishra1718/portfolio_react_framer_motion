@@ -1,0 +1,229 @@
+@import "../../app.scss";
+
+.acad-profile {
+    font-size: 2.5rem;
+    color: rebeccapurple;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+    padding-top: 40px;
+    font-weight: bold;
+    position: relative;  
+
+    @include desktop{
+      font-size: 3rem;
+      letter-spacing: 2%;
+      }
+
+    @include mobile{
+    font-size: 1.5rem;
+    letter-spacing: 1.4px;
+    margin-bottom: 5px;
+    padding-top: 15px;
+    font-weight: bold;
+    position: relative; 
+     }
+
+     @media (max-width: 400px) {
+      font-size: 2rem;
+      letter-spacing: 1.2px;
+      margin-bottom: 0px;
+      padding-top: 0px;
+    }
+
+     @media (max-width: 399px) {
+      font-size: 1.5rem;
+      letter-spacing: 1.2px;
+      margin-bottom: 0px;
+      padding-top: 0px;
+    }
+
+    @media (max-width: 390px)and (min-width:380px) {
+      font-size: 1.5rem;
+      letter-spacing: 1.2px;
+      margin-bottom: 0px;
+      padding-top: 0px;
+    }
+  
+    &:hover {
+      cursor: pointer;
+  
+      &::after {
+        width: 37%; 
+
+        @include mobile{
+          width:70%;
+        }
+
+        @media (max-width: 400px){
+          width:90%
+        }
+
+        @media (max-width: 399px){
+          width:82%
+        }
+
+        @media (max-width: 390px)and (min-width:380px){
+          width: 93%;
+        }
+        
+      }
+    }
+  
+    &::after {
+      content: '';
+      width: 0;
+      height: 3px;
+      background: rebeccapurple;
+      position: absolute;
+      left: 400px;
+      bottom: 5px;
+      transition: 0.5s;
+
+      @include desktop{
+        left: 31.5%;
+        bottom: 0px;
+        }
+      
+      @include mobile{
+      content: '';
+      left: 15%;
+      bottom: 0px;
+      transition: 0.5s;
+      }
+
+      @media (max-width: 400px){
+        left: 5%;
+      }
+
+      @media (max-width: 399px){
+        left: 9%;
+      }
+
+      @media (max-width:390px)and (min-width:380px){
+        left:4%
+      }
+
+    }
+  }
+  
+  .education-container {
+    text-align: center;
+    background: #111132;
+    height: 100vh;
+  
+    .education {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+  
+      .education-item {
+        text-align: center;
+        margin: 0 20px;
+        padding: 20px;
+        border:none;
+        border-radius: 10px;
+        background-color: transparent;
+        transition: transform 0.3s ease-in-out;
+        box-shadow: 5px 7px 10px 1px rebeccapurple;
+        width: 450px;
+
+        @include desktop{
+          margin: 2% 4%;
+          width: 35%;
+          }
+
+        @include mobile {
+        margin: 30px 30px;
+        width: 400px;
+        height: 40vh;
+        }
+
+        @media (max-width:500px)and (max-height : 600px){
+          height: 42vh;
+        }
+
+        @media (max-width: 400px){
+        margin: 4% 20px;
+        width: 300px;
+        }
+
+        @media (max-width: 390px)and (min-width:380px){
+        margin: 10px 10px;
+        width: 330px;
+        }
+  
+        &:hover {
+          transform: scale(1.05);
+          box-shadow: 6px 8px 12px 2px rebeccapurple;
+        }
+  
+        img {
+          width: 350px;
+          height: 150px;
+          border-radius: 10px;
+          object-fit:fill;
+          margin: 0 auto 15px; 
+          display: block;
+
+          @include mobile{
+            width: 300px;
+            height:150px;
+          }
+
+          @media (max-width: 400px){
+            width: 200px;
+            height:100px;
+          }
+          @media (max-width: 390px)and (min-width:380px){
+            width: 300px;
+            height:130px;
+          }
+
+          
+        }
+  
+        h1, h2, h3, p {
+          margin: 5px 0;
+          color: #666;
+
+          @include desktop{
+            font-size: 25px;
+          }
+
+          @include mobile{
+            font-size: 18px;
+          }
+
+          @media (max-width: 400px){
+            font-size: 14px;
+          }
+          @media (max-width: 390px)and (min-width:380px){
+            font-size: 15px;
+          }
+          
+        }
+  
+        p {
+          font-size: 1rem;
+          color: #666;
+
+          @include desktop{
+            font-size: 1.3rem;
+          }
+
+          @include mobile{
+            font-size: 1.1rem;
+          }
+
+          @media (max-width: 400px){
+            font-size: 0.9rem;
+          }
+          @media (max-width: 390px) and (min-width:380px){
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+  
